@@ -10,7 +10,7 @@ namespace Teinda.Models
     public class ConexionBD
     {
       
-        private string conexion = @"Data Source = DESKTOP-LMSRAVI; Initical Catalog = Tienda; Integrated Securty =  true";
+        private string conexion = @"Data Source = DESKTOP-LMSRAVI; Initial Catalog = Tienda; Integrated Security =  true";
         private SqlConnection cone;
         private SqlCommand cmd;
         private SqlDataAdapter leer;

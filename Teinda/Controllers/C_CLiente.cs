@@ -16,11 +16,11 @@ namespace Teinda.Controllers
                 cliente = new Cliente(id,name,ape,tele,dire);
                 if (cliente.Guardar())
                 {
-                    Console.Write("SE GUARDO CON EXITO...");
+                    Console.Write("ERROR AL GUARDAR...");
                 }
                 else
                 {
-                    Console.Write("ERROR AL GUARDAR...");
+                    Console.Write("SE GUARDO CORRECTAMENT...");
                 }
             }
         }
