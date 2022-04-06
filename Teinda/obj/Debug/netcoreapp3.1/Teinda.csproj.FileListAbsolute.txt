@@ -1,0 +1,13 @@
+/home/bravo/Documentos/Tienda/Teinda/bin/Debug/netcoreapp3.1/Teinda
+/home/bravo/Documentos/Tienda/Teinda/bin/Debug/netcoreapp3.1/Teinda.deps.json
+/home/bravo/Documentos/Tienda/Teinda/bin/Debug/netcoreapp3.1/Teinda.runtimeconfig.json
+/home/bravo/Documentos/Tienda/Teinda/bin/Debug/netcoreapp3.1/Teinda.runtimeconfig.dev.json
+/home/bravo/Documentos/Tienda/Teinda/bin/Debug/netcoreapp3.1/Teinda.dll
+/home/bravo/Documentos/Tienda/Teinda/bin/Debug/netcoreapp3.1/Teinda.pdb
+/home/bravo/Documentos/Tienda/Teinda/obj/Debug/netcoreapp3.1/Teinda.csprojAssemblyReference.cache
+/home/bravo/Documentos/Tienda/Teinda/obj/Debug/netcoreapp3.1/Teinda.AssemblyInfoInputs.cache
+/home/bravo/Documentos/Tienda/Teinda/obj/Debug/netcoreapp3.1/Teinda.AssemblyInfo.cs
+/home/bravo/Documentos/Tienda/Teinda/obj/Debug/netcoreapp3.1/Teinda.csproj.CoreCompileInputs.cache
+/home/bravo/Documentos/Tienda/Teinda/obj/Debug/netcoreapp3.1/Teinda.dll
+/home/bravo/Documentos/Tienda/Teinda/obj/Debug/netcoreapp3.1/Teinda.pdb
+/home/bravo/Documentos/Tienda/Teinda/obj/Debug/netcoreapp3.1/Teinda.genruntimeconfig.cache
