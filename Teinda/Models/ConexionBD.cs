@@ -10,10 +10,12 @@ namespace Teinda.Models
     public class ConexionBD
     {
       
-        private string conexion = @"Data Source = DESKTOP-LMSRAVI; Initial Catalog = Tienda; Integrated Security =  true";
+         private string conexion = @"Data Source = DESKTOP-LMSRAVI; Initial Catalog = Tienda; Integrated Security =  true";
         private SqlConnection cone;
         private SqlCommand cmd;
         private SqlDataAdapter leer;
+        private DataTable sda;
+        private DataSet dts;
 
         private void Conectar()
         {
@@ -51,5 +53,28 @@ namespace Teinda.Models
                 cone.Close();
             }
         }
+
+       public DataTable Mostrar(string tabla)
+       {
+           try
+           {
+               string sql = @"Select * from " + tabla;
+               cone.Open();
+               leer = new SqlDataAdapter(sql, cone);
+               dts = new DataSet();
+               leer.Fill(dts,tabla);
+               sda = new DataTable();
+               sda = dts.Tables[tabla];
+           }
+           catch (Exception e) 
+           {
+               
+               throw e;
+           }
+           finally
+           {
+               cone.Close();
+           }
+       }
     }
 }
