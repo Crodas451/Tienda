@@ -8,7 +8,7 @@ namespace Teinda.Controllers
 {
     public class C_CLiente
     {
-        Cliente cliente;
+       Cliente cliente;
         public void Registrar(int id, string name, string ape, string tele, string dire)
         {
             if (id != 0 || name != "" || ape != "" || tele != "" || dire != "")
@@ -24,5 +24,12 @@ namespace Teinda.Controllers
                 }
             }
         }
+
+        public void Motrar()
+        {
+            cliente = new Cliente("");
+            cliente.Leer();
+        }
+       
     }
 }
