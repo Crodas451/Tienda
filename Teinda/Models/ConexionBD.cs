@@ -1,7 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+using System.Text;
+
 using System.Data;
 using System.Data.SqlClient;
 
@@ -14,8 +15,8 @@ namespace Teinda.Models
         private SqlConnection cone;
         private SqlCommand cmd;
         private SqlDataAdapter leer;
-        private DataTable sda;
-        private DataSet dts;
+        private DataSet dst;
+        private DataTable dte;
 
         private void Conectar()
         {
@@ -54,34 +55,36 @@ namespace Teinda.Models
             }
         }
 
-       public DataTable Mostrar(string tabla)
-       {
-           try
-           {
-               string sql = @"Select * from " + tabla;
-               cone.Open();
-               leer = new SqlDataAdapter(sql, cone);
-               dts = new DataSet();
-               leer.Fill(dts,tabla);
-               sda = new DataTable();
-               sda = dts.Tables[tabla];
-           }
-           catch (Exception e) 
-           {
-               
-               throw e;
-           }
-           finally
-           {
-               cone.Close();
-           }
-       }
+        public DataTable Mostrar(string tabla)
+        {
+            try
+            {
+                String sql = @"SELECT * FROM "+ tabla;
+                cone.Open();
+                leer = new SqlDataAdapter(sql, cone);
+                dst = new DataSet();
+                leer.Fill(dst, tabla);
+                dte = new DataTable();
+                dte = dst.Tables[tabla];
+            }
+            catch (Exception e )
+            {
+
+                throw e;
+            }
+            finally
+            {
+                cone.Close();
+            }
+            return dte;
+        }
+
 
        public bool Eliminar(string tabla,int condicion)
        {
            try
            {
-               string sql = @"DELETE "+ tabla + "WHERE "+ condicion;
+               string sql = @"DELETE "+ tabla + "WHERE id ="+ condicion;
                cmd = new SqlCommand(sql, cone);
               cone.Open();
               int i = cmd.ExecuteNonQuery();

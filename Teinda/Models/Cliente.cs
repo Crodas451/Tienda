@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 
 namespace Teinda.Models
 {
@@ -59,13 +59,13 @@ namespace Teinda.Models
         {
             foreach (DataRow item in conexion.Mostrar(this.Nombre).Rows )
             {
-                Console.Write(item[""].ToString());
+                Console.WriteLine(item["id"].ToString()+"\n "+item["nombre"].ToString());
             }
         }
 
         public bool Elimina()
         {
-            if (conexion.Eliminar(this.Nombre, " ="+ this._id))
+            if (conexion.Eliminar(this.Nombre,  this._id))
             {
                 return true;
             }

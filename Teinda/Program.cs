@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Teinda.Controllers;
 
@@ -16,9 +17,9 @@ namespace Teinda
             string name,tele,ape,dire;
             do
             {
-                Console.Write("1- AGG CIENTE");
-                Console.Write("2- MOSTRAR TABLA....");
-                Console.Write("3- ELIMINAR..");
+                Console.Write("1- AGG CIENTE.....\n");
+                Console.Write("2- MOSTRAR TABLA..\n");
+                Console.Write("3- ELIMINAR......\n");
                 Console.Write("OP: ");
                 op = Convert.ToInt32(Console.ReadLine());
                 switch (op)
@@ -37,16 +38,14 @@ namespace Teinda
                        dire = Console.ReadLine();
 
                        cLiente.Registrar(id,name,ape,tele,dire);
-                       System("puase"); 
-                       System("cls");
+                       
                        break;
 
                     }
                     case 2:
                     {
-                        cLiente.Motrar();
-                        System("pause");
-                        System("cls");
+                        cLiente.Motra();
+                        
                         break;
                     }
 

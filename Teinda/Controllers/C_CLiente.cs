@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Teinda.Models;
 
@@ -25,15 +26,15 @@ namespace Teinda.Controllers
             }
         }
 
-        public void Motrar()
+        public void Motra()
         {
-            cliente = new Cliente("");
+            cliente = new Cliente("Cliente");
             cliente.Leer();
         }
 
         public void BorrarSql(int id)
         {
-            cliente = new Cliente(id,"");
+            cliente = new Cliente(id,"Cliente");
             if (cliente.Elimina())
             {
                 Console.Write("REgistro BOrrado");
