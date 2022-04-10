@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace Teinda.Models
@@ -29,6 +31,17 @@ namespace Teinda.Models
             this.Direccion = _direccion;
         }
 
+        public Cliente(string nomTabla)
+        {
+            this.Nombre = nomTabla;
+        }
+
+        public Cliente(int _id, string _nombre)
+        {
+            this.Id = _id;
+            this.Nombre = _nombre;
+        }
+
         public bool Guardar()
         {
             string sql = @"INSERT INTO Cliente values('"+this.Id+"','"+this.Nombre+"','"+this.Apellido+"','"+this.Telefono+"','"+this.Direccion+"');";
@@ -42,5 +55,24 @@ namespace Teinda.Models
             }
         }
 
+        public void Leer()
+        {
+            foreach (DataRow item in conexion.Mostrar(this.Nombre).Rows )
+            {
+                Console.Write(item[""].ToString());
+            }
+        }
+
+        public bool Elimina()
+        {
+            if (conexion.Eliminar(this.Nombre, " ="+ this._id))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

@@ -30,6 +30,20 @@ namespace Teinda.Controllers
             cliente = new Cliente("");
             cliente.Leer();
         }
+
+        public void BorrarSql(int id)
+        {
+            cliente = new Cliente(id,"");
+            if (cliente.Elimina())
+            {
+                Console.Write("REgistro BOrrado");
+            }
+            else
+            {
+                Console.Write("ERROR AL BORRAR");
+            }
+
+        }
        
     }
 }

@@ -49,6 +49,14 @@ namespace Teinda
                         System("cls");
                         break;
                     }
+
+                    case 3:
+                    {
+                        Console.Write("CODIG PERSONAL: ");
+                        id = Convert.ToInt32(Console.ReadLine());
+                        
+                        break;
+                    }
                 }
             } while (op != 0);
             

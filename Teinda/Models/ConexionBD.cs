@@ -76,5 +76,34 @@ namespace Teinda.Models
                cone.Close();
            }
        }
+
+       public bool Eliminar(string tabla,int condicion)
+       {
+           try
+           {
+               string sql = @"DELETE "+ tabla + "WHERE "+ condicion;
+               cmd = new SqlCommand(sql, cone);
+              cone.Open();
+              int i = cmd.ExecuteNonQuery();
+
+              if (i > 0)
+              {
+                  return true;
+              }
+              else
+              {
+                  return false;
+              }
+           }
+           catch (Exception e)
+           {
+               
+               throw e; 
+           }
+           finally
+           {
+               cone.Close();
+           }
+       }
     }
 }
