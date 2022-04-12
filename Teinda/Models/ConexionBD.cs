@@ -80,11 +80,12 @@ namespace Teinda.Models
         }
 
 
-       public bool Eliminar(string tabla,int condicion)
+       public bool Eliminar(string tabla, string condicion)
        {
            try
            {
-               string sql = @"DELETE "+ tabla + "WHERE id ="+ condicion;
+               string sql = @"DELETE "+ tabla + " WHERE "+condicion +";";
+               Console.WriteLine(condicion);
                cmd = new SqlCommand(sql, cone);
               cone.Open();
               int i = cmd.ExecuteNonQuery();

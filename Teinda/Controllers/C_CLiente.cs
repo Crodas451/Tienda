@@ -17,11 +17,11 @@ namespace Teinda.Controllers
                 cliente = new Cliente(id,name,ape,tele,dire);
                 if (cliente.Guardar())
                 {
-                    Console.Write("ERROR AL GUARDAR...");
+                    Console.Write("ERROR AL GUARDAR...\n");
                 }
                 else
                 {
-                    Console.Write("SE GUARDO CORRECTAMENT...");
+                    Console.Write("SE GUARDO CORRECTAMENT...\n");
                 }
             }
         }
@@ -35,6 +35,7 @@ namespace Teinda.Controllers
         public void BorrarSql(int id)
         {
             cliente = new Cliente(id,"Cliente");
+
             if (cliente.Elimina())
             {
                 Console.Write("REgistro BOrrado");

@@ -26,15 +26,15 @@ namespace Teinda
                 {
                     case 1:
                     {
-                       Console.Write("INGRESE N.CARNE.");
+                       Console.Write("INGRESE N.CARNE: ");
                        id = Convert.ToInt32(Console.ReadLine());
-                       Console.Write("INGRESE NOMBRE..");
+                       Console.Write("INGRESE NOMBRE: ");
                        name = Console.ReadLine();
-                       Console.Write("INGRESE APELLIDO");
+                       Console.Write("INGRESE APELLIDO: ");
                        ape = Console.ReadLine(); 
-                       Console.Write("INGRESE TELEFONO");
+                       Console.Write("INGRESE TELEFONO: ");
                        tele = Console.ReadLine();
-                       Console.Write("DIRECCION.......");
+                       Console.Write("DIRECCION: ");
                        dire = Console.ReadLine();
 
                        cLiente.Registrar(id,name,ape,tele,dire);
@@ -42,18 +42,13 @@ namespace Teinda
                        break;
 
                     }
-                    case 2:
-                    {
-                        cLiente.Motra();
-                        
-                        break;
-                    }
-
+                    case 2: { cLiente.Motra(); break;}
+                    
                     case 3:
                     {
                         Console.Write("CODIG PERSONAL: ");
                         id = Convert.ToInt32(Console.ReadLine());
-                        
+                        cLiente.BorrarSql(id);
                         break;
                     }
                 }

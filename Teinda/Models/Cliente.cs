@@ -36,10 +36,10 @@ namespace Teinda.Models
             this.Nombre = nomTabla;
         }
 
-        public Cliente(int _id, string _nombre)
+        public Cliente(int _id, String _nom)
         {
             this.Id = _id;
-            this.Nombre = _nombre;
+            this.Nombre = _nom;
         }
 
         public bool Guardar()
@@ -59,16 +59,16 @@ namespace Teinda.Models
         {
             foreach (DataRow item in conexion.Mostrar(this.Nombre).Rows )
             {
-                Console.WriteLine(item["id"].ToString()+"\n "+item["nombre"].ToString());
+                Console.WriteLine(item["id"].ToString()+"\t"+item["nombre"].ToString());
             }
         }
 
         public bool Elimina()
         {
-            if (conexion.Eliminar(this.Nombre,  this._id))
-            {
+            if (conexion.Eliminar(this.Nombre,"id= '"+this.Id+"'"))
+            
                 return true;
-            }
+            
             else
             {
                 return false;
